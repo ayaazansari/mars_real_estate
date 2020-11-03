@@ -26,9 +26,7 @@ import retrofit2.Call
 import retrofit2.Response
 import javax.security.auth.callback.Callback
 
-/**
- * The [ViewModel] that is attached to the [OverviewFragment].
- */
+
 class OverviewViewModel : ViewModel() {
 
     // The internal MutableLiveData String that stores the status of the most recent request
@@ -49,7 +47,7 @@ class OverviewViewModel : ViewModel() {
      * Sets the value of the status LiveData to the Mars API status.
      */
     private fun getMarsRealEstateProperties() {
-        MarsApi.retrofitService.getProperties().enqueue(object :Callback<String>, retrofit2.Callback<String> {
+        MarsApi.retrofitService.getProperties().enqueue(object :Callback, retrofit2.Callback<String> {
             override fun onFailure(call: Call<String>, t: Throwable) {
                 _response.value = "Failure: "+t.message
             }
