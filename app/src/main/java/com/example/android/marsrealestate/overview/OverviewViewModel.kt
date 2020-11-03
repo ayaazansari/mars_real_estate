@@ -26,9 +26,7 @@ import retrofit2.Call
 import retrofit2.Response
 import javax.security.auth.callback.Callback
 
-/**
- * The [ViewModel] that is attached to the [OverviewFragment].
- */
+
 class OverviewViewModel : ViewModel() {
 
     // The internal MutableLiveData String that stores the status of the most recent request
